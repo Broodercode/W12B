@@ -4,6 +4,8 @@ var randoButton = document.getElementById("rando")
 var title = document.getElementById('title')
 var access = document.getElementById('access')
 var education = document.getElementById('education')
+var price = document.getElementById('price')
+var participants = document.getElementById('participants')
 var one = document.getElementById("1")
 var two = document.getElementById("2")
 var three = document.getElementById("3")
@@ -12,21 +14,24 @@ var dropdown
 
 
 function handleRando(response){
-
+console.log(response)
 
 
 
 title.innerText = `Name: ${response.data.activity}`
 access.innerText = `Difficulty: ${response.data.accessibility}`
 education.innerText = `Type: ${response.data.type}`
+participants.innerText = `Participants: ${response.data.participants}`
+price.innerText = `Price: ${response.data.price}`
 }
 
 function handleMulti(response){
 
-
     title.innerText = `Name: ${response.data.activity}`
-access.innerText = `Difficulty: ${response.data.accessibility}`
-education.innerText = `Type: ${response.data.type}`
+    access.innerText = `Difficulty: ${response.data.accessibility}`
+    education.innerText = `Type: ${response.data.type}`
+    participants.innerText = `Participants: ${response.data.participants}`
+    price.innerText = `Price: ${response.data.price}`
 }
 
 function onRando(){
